@@ -1,6 +1,12 @@
-<h1>Home Page</h1>
-
-<ul ng-repeat="room in home.rooms">
-  
-  <li> {{room.$value}} </li>
-</ul>
+<main class="left-menu">
+  <h1>Bloc Chat</h1>
+  <button ng-click="home.createRoom()">New Room</button>
+    <div ng-repeat="room in home.roomList">
+      <ul>
+        <li>{{ room.$value }}</li>
+      </ul>
+        <button type="button" class="pull-right" ng-click="home.removeRoom(room)">
+          <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+        </button>
+    </div>
+</main>
