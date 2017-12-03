@@ -1,12 +1,21 @@
-<main class="left-menu">
+
   <h1>Bloc Chat</h1>
+  <!--new room button-->
+  <div class = "sidebar">
   <button ng-click="home.createRoom()">New Room</button>
+</div>
+  <!--room list -->
+  <div class = "roomlist">
     <div ng-repeat="room in home.roomList">
-      <ul>
-        <li>{{ room.$value }}</li>
-      </ul>
-        <button type="button" class="pull-right" ng-click="home.removeRoom(room)">
-          <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-        </button>
+      <h3 ng-click="home.changeRoom(room)">{{room.$value}}</h3>
     </div>
-</main>
+  </div>
+
+      <!-- message list-->
+  <div class= "messagelist">
+    <div ng-repeat="message in home.messages">
+      <div class = "username"> {{message.username}}</div>
+      <div class = "time">{{message.sentAt}}</div>
+      <div class = "message-content">{{message.content}}</div>
+    </div>
+  </div>
