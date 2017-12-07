@@ -1,6 +1,20 @@
-<h1>Home Page</h1>
+<h1>Bloc Chat</h1>
+<!--new room button-->
+<div class ="sidebar">
+<button ng-click="home.createRoom()">New Room</button>
+</div>
+<!--room list -->
+<div class ="roomlist">
+  <div ng-repeat="room in home.roomList">
+    <h3 ng-click="home.changeRoom(room)">{{room.$value}}</h3>
+  </div>
+</div>
 
-<ul ng-repeat="room in home.rooms">
-  
-  <li> {{room.$value}} </li>
-</ul>
+    <!-- message list-->
+<div class= "messagelist">
+  <div ng-repeat="message in home.messages">
+    <div class ="username"> {{message.username}}</div>
+    <div class ="time">{{message.sentAt}}</div>
+    <div class ="message-content">{{message.content}}</div>
+  </div>
+</div>

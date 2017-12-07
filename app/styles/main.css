@@ -1,0 +1,24 @@
+html, body {
+  height: 80%;
+}
+
+button{
+  background-color: #C0C0C0;
+  text-align: center;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+body{
+  background-color: #C0C0C0;
+   color: #DCDCDC;
+  text-align: left;
+  padding: 20px;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+ul{
+  list-style-type: none;
+}
+
+.sidebar{
+  background-color: inherit;
+}

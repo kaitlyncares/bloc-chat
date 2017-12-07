@@ -1,0 +1,12 @@
+<div class ="username-main">
+
+<div class="username-header"></div>
+    <h3>Set Username</h3>
+<div class="username-body">
+  <input type="text" ng-model="username.username">
+</div>
+
+
+<div class="username-footer">
+    <button class="btn btn-primary" type="button" ng-click="username.setUsername()" ng-disabled="username.username == null || username.username == ' '">Save</button>
+</div>
